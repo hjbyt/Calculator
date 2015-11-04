@@ -56,14 +56,14 @@ int main(void) {
     printf("Please enter the first operand:");
     scan_count = scanf("%d", &first_number);
     if (scan_count != 1) {
-        printf("Invalid Number");
+        printf("Invalid Number\n");
         return EXIT_FAILURE;
     }
 
     printf("Please enter the second operand:");
     scan_count = scanf("%d", &second_number);
     if (scan_count != 1) {
-        printf("Invalid Number");
+        printf("Invalid Number\n");
         return EXIT_FAILURE;
     }
 
