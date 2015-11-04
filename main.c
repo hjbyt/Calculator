@@ -53,14 +53,14 @@ int main(void) {
         return EXIT_FAILURE;
     }
 
-    printf("Please enter the first operand:");
+    printf("Please enter the first operand:\n");
     scan_count = scanf("%d", &first_number);
     if (scan_count != 1) {
         printf("Invalid Number\n");
         return EXIT_FAILURE;
     }
 
-    printf("Please enter the second operand:");
+    printf("Please enter the second operand:\n");
     scan_count = scanf("%d", &second_number);
     if (scan_count != 1) {
         printf("Invalid Number\n");
@@ -82,7 +82,7 @@ Bool getOperation(Operation *operation, OperationFunction *operation_function) {
     char c;
     int scan_count;
 
-    printf("Please choose an operation (+/-/$):");
+    printf("Please choose an operation (+/-/$):\n");
     scan_count = scanf("%c", &c);
     if (scan_count != 1) {
         return FALSE;
