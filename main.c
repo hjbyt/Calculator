@@ -1,16 +1,12 @@
+/*
+ * Basic Calculator
+ */
+
 #include <stdio.h>
 #include <stdlib.h>
 
 /*
- *  TODO:
- *  - check for errors on scanf, printf, etc... (?)
- *  - replace scanf with getc/getchar/gets/... (?)
- *  -- note, scanf can "succeed" getting a number for input: "1234asdf"
- *  - test, compare to expected outputs
- */
-
-/*
- * Constants
+ * Declarations
  */
 
 typedef enum {
@@ -19,9 +15,6 @@ typedef enum {
     OP_RANGE_SUM
 } Operation;
 
-/*
- * Declarations
- */
 
 typedef int Bool;
 #define TRUE 1
@@ -78,6 +71,12 @@ int main(void) {
     return EXIT_SUCCESS;
 }
 
+/*
+ * Get operation from user.
+ * operation - the operation the user chose
+ * operation_function - function corresponding to the operation the user chose.
+ * return True iff a valid operation was entered.
+ */
 Bool getOperation(Operation *operation, OperationFunction *operation_function) {
     char c;
     int scan_count;
@@ -107,14 +106,23 @@ Bool getOperation(Operation *operation, OperationFunction *operation_function) {
     return TRUE;
 }
 
+/*
+ * Add operation
+ */
 int add(int a, int b) {
     return a + b;
 }
 
+/*
+ * Subtract operation
+ */
 int subtract(int a, int b) {
     return a - b;
 }
 
+/*
+ * Range sum operation
+ */
 int rangeSum(int a, int b) {
     return (a + b) * (b - a + 1) / 2;
 }
